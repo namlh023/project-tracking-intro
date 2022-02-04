@@ -1,0 +1,64 @@
+@use "./font";
+@use "./reset";
+@use "./root";
+
+body {
+  font-family: var(--ff-heading);
+}
+
+.container-wrapper {
+  padding: 38px 32px;
+}
+
+/*--------------------
+Bootstrap Override
+---------------------*/
+
+#body {
+  #navbarNav {
+    background: #ffffff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    margin-top: 32px;
+  }
+
+  .navbar-nav {
+    align-items: center;
+    padding: 16px;
+
+    a {
+      font-family: var(--ff-heading);
+      font-weight: var(--fw-700);
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 1.2px;
+      color: var(--clr-dark-blue);
+    }
+
+    .nav-item {
+      width: 100%;
+      text-align: center;
+
+      &--special {
+        position: relative;
+        margin-top: 16px;
+        padding-top: 16px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          height: 1px;
+          width: 100%;
+          transform: translate(-50%);
+          background-color: var(--clr-dark-grayish-blue);
+          opacity: 0.15;
+        }
+
+        a {
+          color: var(--clr-grayish-blue);
+        }
+      }
+    }
+  }
+}
