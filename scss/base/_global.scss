@@ -8,6 +8,8 @@ body {
 
 .container-wrapper {
   padding: 38px 32px;
+  position: absolute;
+  top: 0;
 }
 
 /*--------------------
@@ -57,6 +59,150 @@ Bootstrap Override
 
         a {
           color: var(--clr-grayish-blue);
+        }
+      }
+    }
+  }
+}
+
+/*--------------------
+Common
+---------------------*/
+
+.h1 {
+  font-weight: var(--fw-700);
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--clr-dark-blue);
+  text-transform: uppercase;
+  max-width: 20ch;
+  margin: 16px 0;
+}
+
+.text {
+  font-family: var(--ff-body);
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: var(--fw-400);
+  color: var(--clr-dark-blue);
+  opacity: 0.75;
+  max-width: 27ch;
+  margin-bottom: 16px;
+}
+
+/*--------------------
+Components
+---------------------*/
+
+.main-image {
+  padding: 100px 0 60px;
+  background-image: url("../../images/Rectangle.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top left 50%;
+}
+
+.main {
+  margin-top: 32px;
+  margin-left: 16px;
+
+  .label {
+    p {
+      display: inline-block;
+      font-size: 15px;
+      line-height: 18px;
+
+      &:first-child {
+        background-color: var(--clr-dark-blue);
+        border-radius: 12.5px;
+        color: var(--clr-white);
+        font-weight: var(--fw-700);
+        letter-spacing: 1px;
+        padding: 3px 10px;
+        margin-right: 16px;
+      }
+
+      &:last-child {
+        font-weight: var(--fw-400);
+        letter-spacing: 5px;
+        color: var(--clr-dark-blue);
+        opacity: 0.5;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.cta {
+  button {
+    background-color: var(--clr-red);
+    border: 0;
+    border-radius: 5px;
+    padding: 12px 25px;
+    margin-right: 10px;
+    font-weight: var(--fw-700);
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.933333px;
+    color: var(--clr-white);
+    text-transform: uppercase;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: var(--fw-400);
+    letter-spacing: 2.5px;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--clr-dark-blue);
+    opacity: 0.5;
+  }
+}
+
+/*--------------------
+Media queries
+---------------------*/
+
+@media (min-width: 1400px) {
+  #body {
+    #navbarNav {
+      background-color: transparent;
+      box-shadow: unset;
+      border-radius: 0;
+      margin-top: 0;
+    }
+
+    .navbar-nav {
+      & > .nav-item + .nav-item {
+        margin-left: 40px;
+      }
+
+      .nav-item {
+        width: 100%;
+        text-align: center;
+        &--special {
+          position: relative;
+          padding-top: 0px;
+          margin-top: 0;
+          margin-left: 40px;
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: var(--clr-dark-grayish-blue);
+          }
+
+          a {
+            color: var(--clr-grayish-blue);
+            padding-left: 40px;
+          }
         }
       }
     }
